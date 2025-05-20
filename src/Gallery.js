@@ -1,6 +1,5 @@
 import React from "react";
 import Avatar from "./Avatar";
-import './Gallery.css';
 
 function Profile({ name, imageFile, power, universe, size }) {
   const person = { name, imageFile };

@@ -14,4 +14,4 @@ const Semana03 = () => {
   );
 };
 
-export default Semana01;
+export default Semana03;
