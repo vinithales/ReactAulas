@@ -2,23 +2,23 @@ import Avatar from './Avatar';
 
 const hoje = new Date();
 const person = {
-    titulo: "Pantera Negra",
-    nomeReal: "Rei T'Challa",
-    name: 'pantera',
-    imageFile: 'pantera.png'
+    titulo: "Homem de Ferro",
+    nomeReal: "Tony Stark",
+    name: 'homemdeferro',
+    imageFile: 'homemdeferro.png'
 };
 
 function formatarData(data) {
     return new Intl.DateTimeFormat(
         'pt-br',
-        { weekday: 'long'}
+        { weekday: 'long' }
     ).format(data);
 }
 
 export default function ToDoList() {
     return (
         <section>
-            <h2 className='titulo'>📋 Lista de tarefas - Pantera Negra</h2>
+            <h2 className='titulo'>📋 Lista de tarefas - Homem de Ferro</h2>
             <div className='toDoList'>
                 <div className='cabecalho'>
                     <Avatar person={person} size={80} />
@@ -30,10 +30,10 @@ export default function ToDoList() {
                     </div>
                 </div>
                 <ul>
-                    <li>🛡️ Defender Wakanda</li>
-                    <li>🤝 Reunião com os Vingadores</li>
-                    <li>🔬 Pesquisar novas tecnologias com Shuri</li>
-                    <li>🌍 Diplomacia com outras nações</li>
+                    <li>🧪 Atualizar o reator ARC</li>
+                    <li>💼 Reunião com investidores da Stark Industries</li>
+                    <li>🛰️ Testar nova armadura com sistema de voo</li>
+                    <li>🧠 Trabalhar com a IA JARVIS em novos projetos</li>
                 </ul>
             </div>
         </section>
