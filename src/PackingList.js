@@ -1,4 +1,4 @@
-import './List.css';
+
 
 function Item({ name, isPacked }) {
     return (

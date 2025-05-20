@@ -1,5 +1,4 @@
 import Avatar from './Avatar';
-import './List.css';
 
 const hoje = new Date();
 const person = {

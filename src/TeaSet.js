@@ -1,4 +1,3 @@
-import './List.css';
 
 function Cup({ guest }) {
   return <h2 className='tituloh2'>Tea cup for guest #{guest}</h2>;

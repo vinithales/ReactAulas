@@ -1,4 +1,4 @@
-import './List.css';
+
 
 function Ingredientes({ eaters }) {
   return (
