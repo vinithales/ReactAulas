@@ -32,7 +32,7 @@ export default function ContadorPessoas() {
           incrementar={() => setMulheres(mulheres + 1)}
           decrementar={() => setMulheres(Math.max(mulheres - 1, 0))}
           resetar={() => setMulheres(0)}
-          imagem="/imagens/mulher.png"
+          imagem="/imagens/mulher.jpg"
         />
       </div>
 

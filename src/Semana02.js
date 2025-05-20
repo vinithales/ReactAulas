@@ -6,7 +6,7 @@ const Semana02 = () => {
     <div>
       <h1>Semana 02</h1>
       <ul>
-        <li><Link to="/contadorPessoas">Atividade 1</Link></li>
+        <li><Link to="/atv04">Atividade 1</Link></li>
       </ul>
       <br />
       <Link to="/">Retornar à página inicial</Link>
