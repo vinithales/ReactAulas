@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from './Home';
-import Semana01 from './Semana01'; 
+import Semana01 from './Semana01';
 import Atv01 from './Atv01';
 import Atv02 from './Atv02';
 import Semana02 from './Semana02';
@@ -27,6 +27,14 @@ import BucketList from './Components/BucketList';
 
 
 
+
+import Semana05 from './Semana05';
+import FormQuiz from './Components/FormQuiz';
+import FormTicket from './Components/FormTicket';
+import Accordion from './Components/Accordion';
+import ChatApp from './Components/ChatApp';
+
+
 export default function MinhasRotas() {
   return (
     <BrowserRouter>
@@ -38,8 +46,6 @@ export default function MinhasRotas() {
         <Route path="/semana02" element={<Semana02 />} />
         <Route path="/semana03" element={<Semana03 />} />
         <Route path="/semana04" element={<Semana04 />} />
-
-          
         <Route path="/semana04/toolbar" element={<Toolbar />} />
         <Route path="/semana04/gallery2" element={<Gallery2 />} />
         <Route path="/semana04/counter" element={<Counter />} />
@@ -54,7 +60,11 @@ export default function MinhasRotas() {
         <Route path="/semana04/list3" element={<List3 />} />
         <Route path="/semana04/list4" element={<List4 />} />
         <Route path="/semana04/bucket-list" element={<BucketList />} />
-
+        <Route path="/semana05" element={<Semana05 />} />
+        <Route path="/semana05/formquiz" element={<FormQuiz />} />
+        <Route path="/semana05/formticket" element={<FormTicket />} />
+        <Route path="/semana05/accordion" element={<Accordion />} />
+        <Route path="/semana05/chat" element={<ChatApp />} />
 
 
       </Routes>
