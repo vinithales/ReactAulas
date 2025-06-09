@@ -1,49 +1,52 @@
 import { useState } from 'react';
 
-function ContactList({ contacts, selectedId, onSelect }) {
+function ContactList({ contatos, idSelecionado, aoSelecionar }) {
   return (
-    <ul>
-      {contacts.map((contact) => (
-        <li key={contact.id}>
-          <button
-            onClick={() => onSelect(contact.id)}
-            style={{ fontWeight: contact.id === selectedId ? 'bold' : 'normal' }}
-          >
-            {contact.name}
-          </button>
-        </li>
+    <div>
+      {contatos.map((contato) => (
+        <button
+          key={contato.id}
+          onClick={() => aoSelecionar(contato.id)}
+          style={{ display: 'block', marginBottom: '5px', fontWeight: contato.id === idSelecionado ? 'bold' : 'normal' }}
+        >
+          {contato.nome}
+        </button>
       ))}
-    </ul>
+    </div>
   );
 }
 
-function Chat({ contact }) {
+function Chat({ contato }) {
+  const [mensagem, setMensagem] = useState('');
+
   return (
-    <section>
-      <h2>Conversando com {contact.name}</h2>
-      <p>{contact.email}</p>
-    </section>
+    <div style={{ marginLeft: '20px', flexGrow: 1 }}>
+      <h3>Chat com {contato.nome}</h3>
+      <textarea
+        placeholder={`Escreva para ${contato.nome}`}
+        value={mensagem}
+        onChange={(e) => setMensagem(e.target.value)}
+        style={{ width: '100%', height: '100px' }}
+      />
+      <button style={{ marginTop: '10px' }}>Enviar para {contato.email}</button>
+    </div>
   );
 }
 
-const contacts = [
-  { id: 0, name: 'Maria', email: 'maria@example.com' },
-  { id: 1, name: 'José', email: 'jose@example.com' },
-  { id: 2, name: 'Ana', email: 'ana@example.com' },
+const contatos = [
+  { id: 0, nome: 'Taylor', email: 'taylor@mail.com' },
+  { id: 1, nome: 'Alice', email: 'alice@mail.com' },
+  { id: 2, nome: 'Bob', email: 'bob@mail.com' },
 ];
 
 export default function ChatApp() {
-  const [selectedId, setSelectedId] = useState(0);
-  const selectedContact = contacts.find((c) => c.id === selectedId);
+  const [idSelecionado, setIdSelecionado] = useState(0);
+  const contatoSelecionado = contatos.find(c => c.id === idSelecionado);
 
   return (
-    <div style={{ display: 'flex', gap: '20px' }}>
-      <ContactList
-        contacts={contacts}
-        selectedId={selectedId}
-        onSelect={setSelectedId}
-      />
-      <Chat contact={selectedContact} />
+    <div style={{ display: 'flex', padding: '20px', maxWidth: '600px', margin: 'auto' }}>
+      <ContactList contatos={contatos} idSelecionado={idSelecionado} aoSelecionar={setIdSelecionado} />
+      <Chat contato={contatoSelecionado} />
     </div>
   );
 }

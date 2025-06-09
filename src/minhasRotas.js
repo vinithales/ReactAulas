@@ -27,13 +27,13 @@ import BucketList from './Components/BucketList';
 
 
 
-
 import Semana05 from './Semana05';
 import FormQuiz from './Components/FormQuiz';
 import FormTicket from './Components/FormTicket';
 import Accordion from './Components/Accordion';
 import ChatApp from './Components/ChatApp';
 
+import App from './/loja/App';
 
 export default function MinhasRotas() {
   return (
@@ -46,6 +46,8 @@ export default function MinhasRotas() {
         <Route path="/semana02" element={<Semana02 />} />
         <Route path="/semana03" element={<Semana03 />} />
         <Route path="/semana04" element={<Semana04 />} />
+
+
         <Route path="/semana04/toolbar" element={<Toolbar />} />
         <Route path="/semana04/gallery2" element={<Gallery2 />} />
         <Route path="/semana04/counter" element={<Counter />} />
@@ -60,13 +62,16 @@ export default function MinhasRotas() {
         <Route path="/semana04/list3" element={<List3 />} />
         <Route path="/semana04/list4" element={<List4 />} />
         <Route path="/semana04/bucket-list" element={<BucketList />} />
+
+
         <Route path="/semana05" element={<Semana05 />} />
         <Route path="/semana05/formquiz" element={<FormQuiz />} />
         <Route path="/semana05/formticket" element={<FormTicket />} />
         <Route path="/semana05/accordion" element={<Accordion />} />
         <Route path="/semana05/chat" element={<ChatApp />} />
 
-
+        <Route path='/loja' element={<App/>}/>
+        
       </Routes>
     </BrowserRouter>
   );
